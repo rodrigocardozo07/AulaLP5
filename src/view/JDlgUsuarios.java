@@ -264,7 +264,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
-
+        Util.perguntar("Deseja excluir o registro?");
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
 
@@ -278,7 +278,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here: 
-
+        Util.mensagem("Não implementadoƪ(˘⌣˘)ʃ"); 
 
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
@@ -286,6 +286,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         // TODO add your handling code here:
         Util.habilitar(false , jTxtCodigo, jTxtNome, jTxtApelido, jFmtCpf, jFmtDataDeNascimento, jPwfSenha, jChbAtivo, jCboNivel, jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true , jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+        Util.limpar(jTxtCodigo, jTxtNome, jTxtApelido, jCboNivel);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jTxtCodigoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTxtCodigoFocusLost

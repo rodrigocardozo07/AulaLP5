@@ -4,28 +4,44 @@
  */
 package tools;
 
+import javax.swing.JComboBox;
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 
 /**
  *
  * @author u07855463160
  */
 public class Util {
-    public static void habilitar(boolean valor, JComponent ...componentes){
+
+    public static void habilitar(boolean valor, JComponent... componentes) {
         for (int i = 0; i < componentes.length; i++) {
             componentes[i].setEnabled(valor);
-            
+
         }
     }
-    
-    public static void limpar(JTextField ... componentes) {
+
+    public static void limpar(JComponent... componentes) {
         for (int i = 0; i < componentes.length; i++) {
-             componentes[i].setText("");
+
+            if(componentes[i] instanceof JTextField) {
+                ((JTextField) componentes[i]).setText("");
+            }
+            if(componentes[i] instanceof JComboBox){
+                ((JComboBox) componentes[i]).setSelectedIndex(-1);
+            }
             
         }
     }
+
+    public static void mensagem(String cad) {
+        JOptionPane.showMessageDialog(null, cad);
+    }
     
+    public static boolean perguntar(String cad){
+        JOptionPane.showConfirmDialog(null, cad);
+        return true;
+    }
     
 }
